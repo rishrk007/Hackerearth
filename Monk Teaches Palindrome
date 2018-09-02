@@ -1,0 +1,31 @@
+    #include<bits/stdc++.h>
+    using namespace std;
+    int main()
+    {
+        ios_base::sync_with_stdio(false);
+        cin.tie(NULL);
+        int n,i;
+        cin>>n;
+        while(n>0)
+        {
+            int count=0,t,m;
+            string s;
+            cin>>s;
+            m=s.size();
+            t=s.size()/2;
+            for(i=0;i<t;i++)
+            {
+                if(s[i]!=s[s.size()-1-i])
+                    {
+                        cout<<"NO"<<endl;
+                        count=1;
+                        break;
+                    }    
+            }
+            if(m%2!=0 && count==0)
+            cout<<"YES"<<" "<<"ODD"<<endl;
+            if(m%2==0 && count==0)
+            cout<<"YES"<<" "<<"EVEN"<<endl;
+        n--;    
+        }
+    }
