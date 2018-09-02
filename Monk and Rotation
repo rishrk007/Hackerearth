@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cin>>n;
+    while(n>0)
+    {
+        int m,k,i;
+        cin>>m>>k;
+        vector<int>a(m);
+        for(i=0;i<m;i++)
+        {
+            cin>>a[i];
+        }
+        rotate(a.begin(),a.begin()+m-(k)%m,a.end());
+        for(i=0;i<m;i++)
+        {
+            cout<<a[i]<<" ";
+        }
+        cout<<endl;
+        n--;
+    }  
+}
